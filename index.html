@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Révise+ — Ton App Complète</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Révise+</h1>
+  <p>Choisis ton niveau → ta matière → commence les exercices.</p>
+</header>
+
+<div id="levels" class="page">
+  <h2>Choisis ton niveau</h2>
+  <div class="grid">
+    <button onclick="chooseLevel('6e')">6e</button>
+    <button onclick="chooseLevel('5e')">5e</button>
+    <button onclick="chooseLevel('4e')">4e</button>
+    <button onclick="chooseLevel('3e')">3e</button>
+    <button onclick="chooseLevel('2nde')">2nde</button>
+    <button onclick="chooseLevel('1ere')">1ère</button>
+    <button onclick="chooseLevel('Tale')">Terminale</button>
+  </div>
+</div>
+
+<div id="subjects" class="page hidden">
+  <h2>Choisis une matière</h2>
+  <div class="grid">
+    <button onclick="chooseSubject('maths')">Maths</button>
+    <button onclick="chooseSubject('francais')">Français</button>
+    <button onclick="chooseSubject('histoire')">Histoire</button>
+    <button onclick="chooseSubject('geo')">Géographie</button>
+    <button onclick="chooseSubject('sciences')">Sciences</button>
+  </div>
+</div>
+
+<div id="exercisePage" class="page hidden">
+  <h2 id="exTitle"></h2>
+  <p id="exContent"></p>
+  <button onclick="nextExercise()">Exercice suivant</button>
+
+  <div id="progress">
+    <div id="progressFill"></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
